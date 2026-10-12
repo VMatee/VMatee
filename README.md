@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <a href="#research-spotlight-ai-for-robotic-control">Robotics research</a> ·
+  <a href="#robotics-research-reinforcement-learning-control">Robotics research</a> ·
   <a href="#open-source-ai-implementations">AI implementations</a> ·
   <a href="#selected-conference-publication">Publication</a> ·
   <a href="https://github.com/VMatee?tab=repositories">All repositories</a>
@@ -13,18 +13,11 @@
 
 I'm an engineering lecturer and developer focused on **robotic control, reinforcement learning, and applied AI systems**. This profile showcases research projects, working AI implementations, and software tools—with code, reproducible experiments, automated tests, and technical documentation.
 
-### Research spotlight: AI for robotic control
+### Robotics Research: Reinforcement Learning Control
 
-**[Learning to Swing Up a Double Inverted Pendulum](https://github.com/VMatee/rl-double-inverted-pendulum)** · *Research code — currently private*
+**[Deep Reinforcement Learning Control of a Double Inverted Pendulum](https://github.com/VMatee/rl-double-inverted-pendulum)** · *Public Research Repository*
 
-Deep reinforcement learning for an **underactuated double inverted pendulum on a cart**. The project develops a nonlinear simulation with continuous cart-force control, compares **A2C, PPO, DDPG, TD3, and SAC**, and investigates controller behavior under changing friction and additional policy training.
-
-- **Robotics:** nonlinear coupled dynamics, three degrees of freedom, one actuator.
-- **Learning-based control:** continuous-action reinforcement learning and swing-up.
-- **Robustness & reproducibility:** friction-shift experiments, recovered policy evaluation, and documented limitations.
-- **Scope:** simulation research, not a hardware deployment or a claim of real-world robustness.
-
-> The repository is private while redistribution rights for archived material are being reviewed. Its code and files are not available to visitors without access. Research details can be shared appropriately when cleared for release.
+Developed a nonlinear simulation of an underactuated double inverted pendulum and investigated deep reinforcement learning for continuous robotic control. The project compares **A2C, PPO, DDPG, TD3, and SAC**, including friction uncertainty, controller adaptation, and reproducible experimental evaluations.
 
 ### Selected conference publication
 
