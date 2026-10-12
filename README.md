@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="#robotics-research-reinforcement-learning-control">Robotics research</a> ·
-  <a href="#open-source-ai-systems--source-code--reproducible-results">AI implementations</a> ·
+  <a href="#ai-systems-and-implementations">AI implementations</a> ·
   <a href="#selected-conference-publication">Publication</a> ·
   <a href="https://github.com/VMatee?tab=repositories">All repositories</a>
 </p>
@@ -31,7 +31,7 @@ Developed and experimentally evaluated a **self-balancing stick robot with three
 
 [**Read the paper on IEEE Xplore**](https://ieeexplore.ieee.org/abstract/document/10003857) · [DOI](https://doi.org/10.23919/ICCAS55662.2022.10003857) · [Watch the robot demonstration](https://youtu.be/T0wGiWzJ40Q)
 
-### Open-source AI systems — source code & reproducible results
+### AI Systems and Implementations
 
 **Core algorithms implemented explicitly, not thin wrappers around model-service APIs.** The LLM and LoRA projects use PyTorch for tensor computation and automatic differentiation; RAG, KAG, and symbolic reasoning require only Python's standard library. All five include runnable examples, implementation guides and regression tests.
 
