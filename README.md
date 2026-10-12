@@ -7,7 +7,7 @@
 <p align="center">
   <a href="https://github.com/VMatee?tab=repositories">Repositories</a> ·
   <a href="https://github.com/VMatee/linux-git-github-labs">Open course</a> ·
-  <a href="https://github.com/VMatee?tab=stars">Reading list</a>
+  <a href="#selected-conference-publication">Publication</a>
 </p>
 
 I'm an engineering lecturer interested in **robotics, reinforcement learning, and applied artificial intelligence**. I develop learning-based control experiments, approachable implementations of machine-learning algorithms, and software tools that bridge research with practical engineering.
@@ -24,6 +24,18 @@ Deep reinforcement learning for an **underactuated double inverted pendulum on a
 - **Scope:** simulation research, not a hardware deployment or a claim of real-world robustness.
 
 > The repository is private while redistribution rights for archived material are being reviewed. Its code and files are not available to visitors without access. Research details can be shared appropriately when cleared for release.
+
+### Selected conference publication
+
+**Matee Vadrukchid** and **Manukid Parnichkun** (2022).  
+[**Development and Control of the Stick Robot Using Three Reaction Wheels**](https://ieeexplore.ieee.org/abstract/document/10003857).  
+*22nd International Conference on Control, Automation and Systems (ICCAS 2022)* · **Busan, South Korea** · pp. 319–324.
+
+Developed and experimentally evaluated a **self-balancing stick robot with three reaction wheels**. The work combines mechanical and embedded-system design, a **coupled-axis dynamic model** based on Lagrangian mechanics, and **Linear Quadratic Regulator (LQR)** control to stabilize the real robot in roll and pitch.
+
+**Research areas:** Reaction-wheel robotics · Dynamic modeling · Embedded control · Optimal control · Hardware validation
+
+[**Read the paper on IEEE Xplore**](https://ieeexplore.ieee.org/abstract/document/10003857) · [DOI](https://doi.org/10.23919/ICCAS55662.2022.10003857) · [Watch the robot demonstration](https://youtu.be/T0wGiWzJ40Q)
 
 ### Featured: AI from first principles
 
