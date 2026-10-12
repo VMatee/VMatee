@@ -1,45 +1,55 @@
 <h1 align="center">Hi, I'm Matee 👋</h1>
-<p align="center"><strong>AI & Machine Learning · Robotics · Developer Tools · Engineering Education</strong></p>
+
 <p align="center">
-  <a href="https://github.com/VMatee?tab=repositories">Projects</a> ·
-  <a href="https://github.com/VMatee?tab=stars">Open source</a> ·
-  <a href="https://github.com/VMatee/linux-git-github-labs">Teaching labs</a>
+  <strong>AI & Machine Learning · Robotics · Developer Tools · Engineering Education</strong>
 </p>
 
-I teach engineering and build practical AI/software systems. My interests include compact language models, learning algorithms, reasoning, retrieval systems, robotics, reproducible research, and developer tooling.
+<p align="center">
+  <a href="https://github.com/VMatee?tab=repositories">Repositories</a> ·
+  <a href="https://github.com/VMatee/linux-git-github-labs">Open course</a> ·
+  <a href="https://github.com/VMatee?tab=stars">Reading list</a>
+</p>
 
-I believe a good technical repository should be **runnable, documented, tested, and honest about its limitations**.
+I'm an engineering lecturer working at the intersection of **machine learning, robotics, and practical software development**. My work combines hands-on implementations, developer tooling, and educational resources designed to be inspected, run, and extended.
 
-## 🧠 AI from scratch — learning by implementation
+### Featured: AI from first principles
 
-These are small, readable educational implementations of the central ideas. They are **not** claims of having trained frontier-scale models or reproduced state-of-the-art papers.
+Small, readable implementations of important ideas—not claims of training production-scale foundation models.
 
-| Project | What it implements | Main ideas |
-|---|---|---|
-| [LLM from Scratch](https://github.com/VMatee/llm-from-scratch) | A tiny decoder-only Transformer trained on characters | Causal attention, tokenization, next-token loss, generation |
-| [Reasoning from Scratch](https://github.com/VMatee/reasoning-from-scratch) | Search and explicit step verification for arithmetic problems | State search, exact arithmetic, verifiers, reproducibility |
-| [LoRA from Scratch](https://github.com/VMatee/lora-from-scratch) | Low-rank trainable adapters on frozen PyTorch linear layers | Matrix factorization, parameter-efficient fine-tuning, merging |
-| [RAG from Scratch](https://github.com/VMatee/rag-from-scratch) | Local BM25 retrieval, source citations, optional LLM generation | Ranking, grounding, retrieval-augmented answering |
-| [KAG from Scratch](https://github.com/VMatee/kag-from-scratch) | Knowledge triples, multi-hop graph paths, traceable evidence | Knowledge graphs, symbolic retrieval, provenance |
+| Repository | Explore | Build status |
+| :--- | :--- | :---: |
+| [**LLM from Scratch**](https://github.com/VMatee/llm-from-scratch) | A character-level causal Transformer: attention, training, and text generation | [![CI](https://github.com/VMatee/llm-from-scratch/actions/workflows/tests.yml/badge.svg)](https://github.com/VMatee/llm-from-scratch/actions/workflows/tests.yml) |
+| [**Reasoning from Scratch**](https://github.com/VMatee/reasoning-from-scratch) | Exact arithmetic search with independently checked solution steps | [![CI](https://github.com/VMatee/reasoning-from-scratch/actions/workflows/tests.yml/badge.svg)](https://github.com/VMatee/reasoning-from-scratch/actions/workflows/tests.yml) |
+| [**LoRA from Scratch**](https://github.com/VMatee/lora-from-scratch) | Trainable low-rank adapters on frozen PyTorch layers | [![CI](https://github.com/VMatee/lora-from-scratch/actions/workflows/tests.yml/badge.svg)](https://github.com/VMatee/lora-from-scratch/actions/workflows/tests.yml) |
+| [**RAG from Scratch**](https://github.com/VMatee/rag-from-scratch) | BM25 retrieval, source-aware evidence, and optional local generation | [![CI](https://github.com/VMatee/rag-from-scratch/actions/workflows/tests.yml/badge.svg)](https://github.com/VMatee/rag-from-scratch/actions/workflows/tests.yml) |
+| [**KAG from Scratch**](https://github.com/VMatee/kag-from-scratch) | Knowledge graph traversal, multi-hop paths, and provenance | [![CI](https://github.com/VMatee/kag-from-scratch/actions/workflows/tests.yml/badge.svg)](https://github.com/VMatee/kag-from-scratch/actions/workflows/tests.yml) |
 
-**Recommended progression:** LLM → LoRA → RAG → KAG → Reasoning. Read the tests before scaling any implementation.
+**Learning path:** [LLM](https://github.com/VMatee/llm-from-scratch) → [LoRA](https://github.com/VMatee/lora-from-scratch) → [RAG](https://github.com/VMatee/rag-from-scratch) → [KAG](https://github.com/VMatee/kag-from-scratch) → [Reasoning](https://github.com/VMatee/reasoning-from-scratch). Each repository includes tests, a guided notebook, and known limitations.
 
-## 🛠️ Other public engineering projects
+### Software I build
 
-- **[JV CLI](https://github.com/VMatee/jv-cli)** — AI coding assistant workflow for the terminal, with published install guides.
-- **[JV Desktop](https://github.com/VMatee/jv-desktop)** — desktop application for JV workflows (Tauri, React, Rust).
-- **[JV LLM API Examples](https://github.com/VMatee/jv-llm-api-example)** — Python and Rust examples for a documented LLM API.
-- **[JV Web Tools](https://github.com/VMatee/jv-web-tools)** — website and documentation for a browser developer tool.
+| Project | Purpose | Stack |
+| :--- | :--- | :--- |
+| [**JV CLI**](https://github.com/VMatee/jv-cli) | Terminal-first AI coding assistant with installable releases | CLI tooling |
+| [**JV Desktop**](https://github.com/VMatee/jv-desktop) | Desktop workspace for CLI-assisted development | Tauri · React · Rust |
+| [**JV LLM API examples**](https://github.com/VMatee/jv-llm-api-example) | Practical examples of an LLM service API | Python · Rust |
+| [**JV Web Tools**](https://github.com/VMatee/jv-web-tools) | Browser developer utility documentation and support | Web tooling |
 
-## 🎓 Open engineering education
+### Teaching in the open
 
-[Linux, Git & GitHub Labs](https://github.com/VMatee/linux-git-github-labs) is a beginner-friendly course project covering Linux commands, version control, pull requests, team collaboration, CI, and building a professional GitHub portfolio. Exercises are designed to provide feedback with automated checks; human code review remains important.
+[**Linux, Git & GitHub Labs**](https://github.com/VMatee/linux-git-github-labs) is a beginner-friendly, 15-session learning path for engineering students—from their first terminal commands to collaborative pull requests and a professional project portfolio.
 
-## Principles
+[![Course checks](https://github.com/VMatee/linux-git-github-labs/actions/workflows/autograde.yml/badge.svg)](https://github.com/VMatee/linux-git-github-labs/actions/workflows/autograde.yml)
 
-- Prefer **evidence over inflated metrics**: working code, tests, reproducible steps, and clear limitations.
-- Build educational versions **from first principles**, with links to primary literature where appropriate.
-- Treat contributions, stars, and forks as voluntary community signals, **not grading requirements**.
-- Keep private student records and unpublished research out of public repositories.
+### How I work
 
-> Open-source portfolio in progress. Feedback and useful issues are welcome.
+- **Make it reproducible:** document setup, provide runnable examples, and test changes.
+- **Make it understandable:** explain the smallest useful implementation before adding complexity.
+- **Make it useful:** connect ML concepts to software systems and engineering applications.
+- **Make limitations explicit:** examples and teaching demos are not production benchmarks.
+
+**Interests:** LLM architectures · Efficient fine-tuning · Retrieval and knowledge graphs · Reinforcement learning · Robotics · Open-source education
+
+---
+
+<sub>All public repositories are works in progress. Contributions and constructive feedback are welcome; please review each project's contribution guide.</sub>
