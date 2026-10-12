@@ -1,7 +1,7 @@
 <h1 align="center">Hi, I'm Matee 👋</h1>
 
 <p align="center">
-  <strong>AI & Machine Learning · Robotics · Developer Tools · Engineering Education</strong>
+  <strong>Robotics & Reinforcement Learning · Applied AI · Developer Tools · Engineering Education</strong>
 </p>
 
 <p align="center">
@@ -10,7 +10,20 @@
   <a href="https://github.com/VMatee?tab=stars">Reading list</a>
 </p>
 
-I'm an engineering lecturer working at the intersection of **machine learning, robotics, and practical software development**. My work combines hands-on implementations, developer tooling, and educational resources designed to be inspected, run, and extended.
+I'm an engineering lecturer interested in **robotics, reinforcement learning, and applied artificial intelligence**. I develop learning-based control experiments, approachable implementations of machine-learning algorithms, and software tools that bridge research with practical engineering.
+
+### Research spotlight: AI for robotic control
+
+**[Learning to Swing Up a Double Inverted Pendulum](https://github.com/VMatee/rl-double-inverted-pendulum)** · *Research code — currently private*
+
+Deep reinforcement learning for an **underactuated double inverted pendulum on a cart**. The project develops a nonlinear simulation with continuous cart-force control, compares **A2C, PPO, DDPG, TD3, and SAC**, and investigates controller behavior under changing friction and additional policy training.
+
+- **Robotics:** nonlinear coupled dynamics, three degrees of freedom, one actuator.
+- **Learning-based control:** continuous-action reinforcement learning and swing-up.
+- **Robustness & reproducibility:** friction-shift experiments, recovered policy evaluation, and documented limitations.
+- **Scope:** simulation research, not a hardware deployment or a claim of real-world robustness.
+
+> The repository is private while redistribution rights for archived material are being reviewed. Its code and files are not available to visitors without access. Research details can be shared appropriately when cleared for release.
 
 ### Featured: AI from first principles
 
@@ -48,7 +61,7 @@ Small, readable implementations of important ideas—not claims of training prod
 - **Make it useful:** connect ML concepts to software systems and engineering applications.
 - **Make limitations explicit:** examples and teaching demos are not production benchmarks.
 
-**Interests:** LLM architectures · Efficient fine-tuning · Retrieval and knowledge graphs · Reinforcement learning · Robotics · Open-source education
+**Interests:** Robotic control · Reinforcement learning · Sim-to-real challenges · Nonlinear dynamics · LLM architectures · Efficient fine-tuning · Retrieval & knowledge graphs · Open-source education
 
 ---
 
