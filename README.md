@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="#robotics-research-reinforcement-learning-control">Robotics research</a> ·
-  <a href="#open-source-ai-implementations">AI implementations</a> ·
+  <a href="#open-source-ai-systems--source-code--reproducible-results">AI implementations</a> ·
   <a href="#selected-conference-publication">Publication</a> ·
   <a href="https://github.com/VMatee?tab=repositories">All repositories</a>
 </p>
@@ -31,19 +31,46 @@ Developed and experimentally evaluated a **self-balancing stick robot with three
 
 [**Read the paper on IEEE Xplore**](https://ieeexplore.ieee.org/abstract/document/10003857) · [DOI](https://doi.org/10.23919/ICCAS55662.2022.10003857) · [Watch the robot demonstration](https://youtu.be/T0wGiWzJ40Q)
 
-### Open-source AI implementations
+### Open-source AI systems — source code & reproducible results
 
-A collection of **implemented, runnable AI/ML systems** built from first principles. Each repository contains source code, tests, and documented behavior—not just conceptual descriptions.
+**Core algorithms implemented explicitly, not thin wrappers around model-service APIs.** The LLM and LoRA projects use PyTorch for tensor computation and automatic differentiation; RAG, KAG, and symbolic reasoning require only Python's standard library. All five include runnable examples, implementation guides and regression tests.
 
-| Project | Implementation | What you can run / inspect | CI |
-| :--- | :--- | :--- | :---: |
-| [**LLM from Scratch**](https://github.com/VMatee/llm-from-scratch) | Decoder-only causal Transformer in PyTorch, with character tokenization, masked attention, and a training loop | Train a model checkpoint, generate text, and test causal masking | [![Tests](https://github.com/VMatee/llm-from-scratch/actions/workflows/tests.yml/badge.svg)](https://github.com/VMatee/llm-from-scratch/actions/workflows/tests.yml) |
-| [**LoRA from Scratch**](https://github.com/VMatee/lora-from-scratch) | Low-rank trainable adapters for frozen PyTorch linear layers | Run a synthetic adaptation experiment; verify parameter counts and merge/unmerge equivalence | [![Tests](https://github.com/VMatee/lora-from-scratch/actions/workflows/tests.yml/badge.svg)](https://github.com/VMatee/lora-from-scratch/actions/workflows/tests.yml) |
-| [**RAG from Scratch**](https://github.com/VMatee/rag-from-scratch) | BM25 document indexing, ranked retrieval, and source-aware context assembly | Retrieve evidence with source references; optionally generate answers using local Ollama | [![Tests](https://github.com/VMatee/rag-from-scratch/actions/workflows/tests.yml/badge.svg)](https://github.com/VMatee/rag-from-scratch/actions/workflows/tests.yml) |
-| [**KAG from Scratch**](https://github.com/VMatee/kag-from-scratch) | Source-aware knowledge triples and bounded multi-hop graph traversal | Query relationships and inspect supported paths with evidence identifiers | [![Tests](https://github.com/VMatee/kag-from-scratch/actions/workflows/tests.yml/badge.svg)](https://github.com/VMatee/kag-from-scratch/actions/workflows/tests.yml) |
-| [**Reasoning from Scratch**](https://github.com/VMatee/reasoning-from-scratch) | Exact-rational arithmetic search with an independent step verifier | Solve arithmetic puzzles and inspect verifiable solution traces | [![Tests](https://github.com/VMatee/reasoning-from-scratch/actions/workflows/tests.yml/badge.svg)](https://github.com/VMatee/reasoning-from-scratch/actions/workflows/tests.yml) |
+#### [01 · LLM from Scratch — Causal Transformer](https://github.com/VMatee/llm-from-scratch)
 
-**Implementation scope:** These are compact, tested reference implementations. Their READMEs document capabilities and limitations; no production-scale training or benchmark superiority is claimed.
+Implemented character tokenization, decoder-only multi-head attention with causal masking, Transformer blocks, next-token training and sampling. Includes **tensor-level reference implementations of linear layers, embeddings, LayerNorm, GELU, softmax, cross entropy and AdamW**, alongside a faster optimized execution path.
+
+**Source:** [Transformer architecture](https://github.com/VMatee/llm-from-scratch/blob/main/src/minigpt/model.py) · [Tensor primitives](https://github.com/VMatee/llm-from-scratch/blob/main/src/minigpt/primitives.py) · [AdamW](https://github.com/VMatee/llm-from-scratch/blob/main/src/minigpt/optim.py) · [Training / validation](https://github.com/VMatee/llm-from-scratch/blob/main/src/minigpt/train.py)  
+**Output:** Locally trained character-model checkpoint, generated text and held-out cross-entropy diagnostics. [Implementation details](https://github.com/VMatee/llm-from-scratch/blob/main/docs/implementation.md) · [![Tests](https://github.com/VMatee/llm-from-scratch/actions/workflows/tests.yml/badge.svg)](https://github.com/VMatee/llm-from-scratch/actions/workflows/tests.yml)
+
+#### [02 · LoRA from Scratch — Low-Rank Neural Adaptation](https://github.com/VMatee/lora-from-scratch)
+
+Implemented low-rank matrices **A/B**, frozen base-weight updates, scaling, weight merge/unmerge, and recursive adapter injection into selected neural-network layers. Lightweight adapter checkpoints contain just the learned low-rank parameters.
+
+**Source:** [LoRA layer](https://github.com/VMatee/lora-from-scratch/blob/main/src/lora_lab/layers.py) · [Model injection / checkpoints](https://github.com/VMatee/lora-from-scratch/blob/main/src/lora_lab/inject.py) · [Runnable experiment](https://github.com/VMatee/lora-from-scratch/blob/main/src/lora_lab/inject_demo.py)  
+**Output:** Synthetic adaptation-loss comparison, adapter parameter counts and numerical merge-equivalence checks. [Implementation details](https://github.com/VMatee/lora-from-scratch/blob/main/docs/implementation.md) · [![Tests](https://github.com/VMatee/lora-from-scratch/actions/workflows/tests.yml/badge.svg)](https://github.com/VMatee/lora-from-scratch/actions/workflows/tests.yml)
+
+#### [03 · RAG from Scratch — BM25 Retrieval Engine](https://github.com/VMatee/rag-from-scratch)
+
+Implemented a lexical search engine with tokenization, **term-frequency postings, an inverted index, BM25 scoring, source tracking and per-term score explanations**—without a retrieval framework or vector database. Optional Ollama integration is used only for local text generation.
+
+**Source:** [Index and scoring](https://github.com/VMatee/rag-from-scratch/blob/main/src/rag_lab/bm25.py) · [Evidence assembly](https://github.com/VMatee/rag-from-scratch/blob/main/src/rag_lab/pipeline.py) · [Retrieval evaluation](https://github.com/VMatee/rag-from-scratch/blob/main/src/rag_lab/evaluate.py)  
+**Output:** Ranked document hits with source identifiers and independent BM25 score/ranking parity tests. [Implementation details](https://github.com/VMatee/rag-from-scratch/blob/main/docs/implementation.md) · [![Tests](https://github.com/VMatee/rag-from-scratch/actions/workflows/tests.yml/badge.svg)](https://github.com/VMatee/rag-from-scratch/actions/workflows/tests.yml)
+
+#### [04 · KAG from Scratch — Verified Graph Traversal](https://github.com/VMatee/kag-from-scratch)
+
+Implemented source-aware subject–relation–object indexing, deterministic **bounded breadth-first search**, multi-hop evidence paths and an independent verifier that rejects unsupported or altered graph edges.
+
+**Source:** [Graph algorithms / verifier](https://github.com/VMatee/kag-from-scratch/blob/main/src/kag_lab/graph.py) · [Query checks](https://github.com/VMatee/kag-from-scratch/blob/main/src/kag_lab/evaluate.py)  
+**Output:** Explainable graph paths with source IDs, hop budgets and traversal diagnostics. [Implementation details](https://github.com/VMatee/kag-from-scratch/blob/main/docs/implementation.md) · [![Tests](https://github.com/VMatee/kag-from-scratch/actions/workflows/tests.yml/badge.svg)](https://github.com/VMatee/kag-from-scratch/actions/workflows/tests.yml)
+
+#### [05 · Reasoning from Scratch — Exact Search & Proof Checking](https://github.com/VMatee/reasoning-from-scratch)
+
+Implemented **depth-first arithmetic search with state deduplication**, an independent **bitmask subset-dynamic-programming solver**, and exact rational step verification without a reasoning-model service.
+
+**Source:** [DFS solver](https://github.com/VMatee/reasoning-from-scratch/blob/main/src/verifier_reasoning/solver.py) · [Subset DP](https://github.com/VMatee/reasoning-from-scratch/blob/main/src/verifier_reasoning/dp.py) · [JSON proof certificates](https://github.com/VMatee/reasoning-from-scratch/blob/main/src/verifier_reasoning/certificate.py)  
+**Output:** Exact arithmetic solutions with independently verifiable steps and machine-readable certificates. [Implementation details](https://github.com/VMatee/reasoning-from-scratch/blob/main/docs/implementation.md) · [![Tests](https://github.com/VMatee/reasoning-from-scratch/actions/workflows/tests.yml/badge.svg)](https://github.com/VMatee/reasoning-from-scratch/actions/workflows/tests.yml)
+
+*Scope:* compact, tested implementations with reproducible demonstrations—not claims of frontier-model quality or identical GPU throughput to specialized frameworks.
 
 ### Software I build
 
