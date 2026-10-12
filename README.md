@@ -1,16 +1,17 @@
-<h1 align="center">Hi, I'm Matee 👋</h1>
+<h1 align="center">Matee Vadrukchid</h1>
 
 <p align="center">
-  <strong>Robotics & Reinforcement Learning · Applied AI · Developer Tools · Engineering Education</strong>
+  <strong>Robotics · Reinforcement Learning · AI Systems · Software Engineering</strong>
 </p>
 
 <p align="center">
-  <a href="https://github.com/VMatee?tab=repositories">Repositories</a> ·
-  <a href="https://github.com/VMatee/linux-git-github-labs">Open course</a> ·
-  <a href="#selected-conference-publication">Publication</a>
+  <a href="#research-spotlight-ai-for-robotic-control">Robotics research</a> ·
+  <a href="#open-source-ai-implementations">AI implementations</a> ·
+  <a href="#selected-conference-publication">Publication</a> ·
+  <a href="https://github.com/VMatee?tab=repositories">All repositories</a>
 </p>
 
-I'm an engineering lecturer interested in **robotics, reinforcement learning, and applied artificial intelligence**. I develop learning-based control experiments, approachable implementations of machine-learning algorithms, and software tools that bridge research with practical engineering.
+I'm an engineering lecturer and developer focused on **robotic control, reinforcement learning, and applied AI systems**. This profile showcases research projects, working AI implementations, and software tools—with code, reproducible experiments, automated tests, and technical documentation.
 
 ### Research spotlight: AI for robotic control
 
@@ -37,19 +38,19 @@ Developed and experimentally evaluated a **self-balancing stick robot with three
 
 [**Read the paper on IEEE Xplore**](https://ieeexplore.ieee.org/abstract/document/10003857) · [DOI](https://doi.org/10.23919/ICCAS55662.2022.10003857) · [Watch the robot demonstration](https://youtu.be/T0wGiWzJ40Q)
 
-### Featured: AI from first principles
+### Open-source AI implementations
 
-Small, readable implementations of important ideas—not claims of training production-scale foundation models.
+A collection of **implemented, runnable AI/ML systems** built from first principles. Each repository contains source code, tests, and documented behavior—not just conceptual descriptions.
 
-| Repository | Explore | Build status |
-| :--- | :--- | :---: |
-| [**LLM from Scratch**](https://github.com/VMatee/llm-from-scratch) | A character-level causal Transformer: attention, training, and text generation | [![CI](https://github.com/VMatee/llm-from-scratch/actions/workflows/tests.yml/badge.svg)](https://github.com/VMatee/llm-from-scratch/actions/workflows/tests.yml) |
-| [**Reasoning from Scratch**](https://github.com/VMatee/reasoning-from-scratch) | Exact arithmetic search with independently checked solution steps | [![CI](https://github.com/VMatee/reasoning-from-scratch/actions/workflows/tests.yml/badge.svg)](https://github.com/VMatee/reasoning-from-scratch/actions/workflows/tests.yml) |
-| [**LoRA from Scratch**](https://github.com/VMatee/lora-from-scratch) | Trainable low-rank adapters on frozen PyTorch layers | [![CI](https://github.com/VMatee/lora-from-scratch/actions/workflows/tests.yml/badge.svg)](https://github.com/VMatee/lora-from-scratch/actions/workflows/tests.yml) |
-| [**RAG from Scratch**](https://github.com/VMatee/rag-from-scratch) | BM25 retrieval, source-aware evidence, and optional local generation | [![CI](https://github.com/VMatee/rag-from-scratch/actions/workflows/tests.yml/badge.svg)](https://github.com/VMatee/rag-from-scratch/actions/workflows/tests.yml) |
-| [**KAG from Scratch**](https://github.com/VMatee/kag-from-scratch) | Knowledge graph traversal, multi-hop paths, and provenance | [![CI](https://github.com/VMatee/kag-from-scratch/actions/workflows/tests.yml/badge.svg)](https://github.com/VMatee/kag-from-scratch/actions/workflows/tests.yml) |
+| Project | Implementation | What you can run / inspect | CI |
+| :--- | :--- | :--- | :---: |
+| [**LLM from Scratch**](https://github.com/VMatee/llm-from-scratch) | Decoder-only causal Transformer in PyTorch, with character tokenization, masked attention, and a training loop | Train a model checkpoint, generate text, and test causal masking | [![Tests](https://github.com/VMatee/llm-from-scratch/actions/workflows/tests.yml/badge.svg)](https://github.com/VMatee/llm-from-scratch/actions/workflows/tests.yml) |
+| [**LoRA from Scratch**](https://github.com/VMatee/lora-from-scratch) | Low-rank trainable adapters for frozen PyTorch linear layers | Run a synthetic adaptation experiment; verify parameter counts and merge/unmerge equivalence | [![Tests](https://github.com/VMatee/lora-from-scratch/actions/workflows/tests.yml/badge.svg)](https://github.com/VMatee/lora-from-scratch/actions/workflows/tests.yml) |
+| [**RAG from Scratch**](https://github.com/VMatee/rag-from-scratch) | BM25 document indexing, ranked retrieval, and source-aware context assembly | Retrieve evidence with source references; optionally generate answers using local Ollama | [![Tests](https://github.com/VMatee/rag-from-scratch/actions/workflows/tests.yml/badge.svg)](https://github.com/VMatee/rag-from-scratch/actions/workflows/tests.yml) |
+| [**KAG from Scratch**](https://github.com/VMatee/kag-from-scratch) | Source-aware knowledge triples and bounded multi-hop graph traversal | Query relationships and inspect supported paths with evidence identifiers | [![Tests](https://github.com/VMatee/kag-from-scratch/actions/workflows/tests.yml/badge.svg)](https://github.com/VMatee/kag-from-scratch/actions/workflows/tests.yml) |
+| [**Reasoning from Scratch**](https://github.com/VMatee/reasoning-from-scratch) | Exact-rational arithmetic search with an independent step verifier | Solve arithmetic puzzles and inspect verifiable solution traces | [![Tests](https://github.com/VMatee/reasoning-from-scratch/actions/workflows/tests.yml/badge.svg)](https://github.com/VMatee/reasoning-from-scratch/actions/workflows/tests.yml) |
 
-**Learning path:** [LLM](https://github.com/VMatee/llm-from-scratch) → [LoRA](https://github.com/VMatee/lora-from-scratch) → [RAG](https://github.com/VMatee/rag-from-scratch) → [KAG](https://github.com/VMatee/kag-from-scratch) → [Reasoning](https://github.com/VMatee/reasoning-from-scratch). Each repository includes tests, a guided notebook, and known limitations.
+**Implementation scope:** These are compact, tested reference implementations. Their READMEs document capabilities and limitations; no production-scale training or benchmark superiority is claimed.
 
 ### Software I build
 
